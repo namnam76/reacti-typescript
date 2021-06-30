@@ -1,2 +1,2 @@
-# reacti-typescript
+# react-typescript
 Created with CodeSandbox
