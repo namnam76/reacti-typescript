@@ -1,4 +1,5 @@
 import { TodoType } from "./types/todo";
+import { VFC } from "react";
 
 // type TodoType = {
 //   userId: number;
@@ -7,9 +8,10 @@ import { TodoType } from "./types/todo";
 //   // オプションのpropsの場合は?をつける
 // };
 
-export const Todo = (
+export const Todo: VFC<Omit<TodoType, "id">> = (
   // props:Omit<TodoType,"id">
-  props: Pick<TodoType, "userId" | "title" | "completed">
+  props
+  // props:Pick<TodoType, "userId" | "title" | "completed">
 ) => {
   const { title, userId, completed = false } = props;
   const completeMark = completed ? "[完]" : "[未]";
